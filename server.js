@@ -23,10 +23,12 @@ app.listen(port, function(){
     console.log(`listen on ${port}`);
 });
 
+// app.get('/',(req,res)=>{
+//     res.render('index');
+// });
 app.get('/',(req,res)=>{
-    res.render('index');
-});
-
+    res.send("아ㅣㅇ요");
+})
 
 app.use('/play',require('./routes/playRouter'));
 app.get('/type/:name',(req,res)=>{
@@ -152,4 +154,5 @@ app.use('/api/user',require('./routes/userRouter'));
 //     const q=req.query;
 //     console.log(q);
 // });
+
 
