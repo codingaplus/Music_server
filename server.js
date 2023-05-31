@@ -23,40 +23,39 @@ app.listen(port, function(){
     console.log(`listen on ${port}`);
 });
 
- app.get('/',(req,res)=>{
-     res.render('index');
- });
+app.get('/',(req,res)=>{
+    res.render('index');
+});
+
+app.use('/play',require('./routes/playRouter'));
+app.get('/type/:name',(req,res)=>{
+    const {name}=req.params;
+    res.render(`${name}`);
+})
+
+app.get('/genre/:name',(req,res)=>{
+    const {name}=req.params;
+    res.render(`${name}`);
+})
+
+app.use('/search',require('./routes/search_Router'));
 
 
-// app.use('/play',require('./routes/playRouter'));
-// app.get('/type/:name',(req,res)=>{
-//     const {name}=req.params;
-//     res.render(`${name}`);
-// })
+//여기부터 게시판 부분
+app.use('/api/list',require('./routes/listRouter')); //게시판 메인
 
-// app.get('/genre/:name',(req,res)=>{
-//     const {name}=req.params;
-//     res.render(`${name}`);
-// })
+app.get('/api/list/write',(req,res)=>{ //글 작성
+    res.render('write');
+});
 
-// app.use('/search',require('./routes/search_Router'));
-
-
-// //여기부터 게시판 부분
-// app.use('/api/list',require('./routes/listRouter')); //게시판 메인
-
-// app.get('/api/list/write',(req,res)=>{ //글 작성
-//     res.render('write');
-// });
-
-// app.use('/api/list/read/:idx',require('./routes/list_detail_Router'));
-// //여기까지 게시판 부분
+app.use('/api/list/read/:idx',require('./routes/list_detail_Router'));
+//여기까지 게시판 부분
 
 
 
-// app.use('/api/movie',require('./routes/movieRouter'));
+app.use('/api/movie',require('./routes/movieRouter'));
 
-// app.use('/api/user',require('./routes/userRouter'));
+app.use('/api/user',require('./routes/userRouter'));
 
 
 
@@ -157,6 +156,15 @@ app.listen(port, function(){
 // app.get('/cat',(req, res)=>{
 //     res.send('고양이');
 // });
+
+// app.get('/user/:id',(req,res)=>{
+//     // const q = req.params; //:id가 params로 들어가는거임
+//     // console.log(q.id);
+//     // res.send({'sound':q.id});
+//     const q=req.query;
+//     console.log(q);
+// });
+
 
 // app.get('/user/:id',(req,res)=>{
 //     // const q = req.params; //:id가 params로 들어가는거임
