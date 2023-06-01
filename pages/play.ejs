@@ -239,9 +239,14 @@
       <a style="color: #ffffff;" href="#">인기차트</a>
       </div>
     <div class="custom-text_chart">
-    <a style="color: #ffffff;padding: 5px;" href="#">test1</a>
-    <a style="color: #ffffff;padding: 5px;" href="#">test2</a>
-    <a style="color: #ffffff;padding: 5px;" href="#">test3</a>
+      
+    <%
+    for(var i=0; i<13; i++)
+    {
+        var RR = ROWS[i];
+    %>
+    <a style="color: #ffffff;padding: 5px;" href="/play?query=<%=RR.title%>"><%=RR.title%></a>
+    <%}%>
     </div>
     </div>
 

@@ -74,24 +74,20 @@
         <h3><p style="font:bold 20px Dotum;">인기차트</p></h3>
         <li><a href="#">국내차트</a></li>
         <li><a href="#">해외차트</a></li>
-        <div class="aa"><a href="http://localhost:8080/pet"><img src="./img/1.jpg" style="float: left;  margin-top: 10px; margin-left: 10px;" width="10%" height="10%"alt="이미지 손상"><p></p></a></div>
-        <div class="aa"><a href="http://localhost:8080/pet"><img src="./img/2.jpg" style="float: left;  margin-top: 10px; margin-left: 10px;" width="10%" height="10%"alt="이미지 손상"><p></p></a></div>
-        <div class="aa"><a href="http://localhost:8080/pet"><img src="./img/3.jpg" style="float: left;  margin-top: 10px; margin-left: 10px;" width="10%" height="10%"alt="이미지 손상"><p></p></a></div>
-        <div class="aa"><a href="http://localhost:8080/pet"><img src="./img/4.jpg" style="float: left;  margin-top: 10px; margin-left: 10px;" width="10%" height="10%"alt="이미지 손상"><p></p></a></div>
-        <div class="aa"><a href="http://localhost:8080/pet"><img src="./img/ds.jpg" style="float: left;  margin-top: 10px; margin-left: 10px;" width="10%" height="10%"alt="이미지 손상"><p></p></a></div>
-        <div class="aa"><a href="http://localhost:8080/pet"><img src="./img/폰서트.jpg" style="float: left;  margin-top: 10px; margin-left: 10px;" width="10%" height="10%"alt="이미지 손상"><p></p></a></div>
-        <hr style = "border: none;background-color: transparent;"width="100%">
-        <div class="aa"><a href="http://localhost:8080/pet"><img src="./img/오래된 노래.jpg" style="float: left;  margin-top: 10px; margin-left: 10px;" width="10%" height="10%"alt="이미지 손상"><p></p></a></div>
-        <div class="aa"><a href="http://localhost:8080/pet"><img src="./img/sou.jpg" style="float: left;  margin-top: 10px; margin-left: 10px;" width="10%" height="10%"alt="이미지 손상"><p></p></a></div>
-        <div class="aa"><a href="http://localhost:8080/pet"><img src="./img/1.jpg" style="float: left;  margin-top: 10px; margin-left: 10px;" width="10%" height="10%"alt="이미지 손상"><p></p></a></div>
-        <div class="aa"><a href="http://localhost:8080/pet"><img src="./img/2.jpg" style="float: left;  margin-top: 10px; margin-left: 10px;" width="10%" height="10%"alt="이미지 손상"><p></p></a></div>
-        <div class="aa"><a href="http://localhost:8080/pet"><img src="./img/3.jpg" style="float: left;  margin-top: 10px; margin-left: 10px;" width="10%" height="10%"alt="이미지 손상"><p></p></a></div>
-        <div class="aa"><a href="http://localhost:8080/pet"><img src="./img/4 .jpg" style="float: left;  margin-top: 10px; margin-left: 10px;" width="10%" height="10%"alt="이미지 손상"><p></p></a></div>
+        <%
+          for(var i=0; i<12; i++)
+          {
+              var data = rows[i];
+          %>
+          <div class="aa"><a href="/play?query=<%=data.title%>" target="_blank"><img src="./img/<%=data.title%>.jpg" style="float: left;  margin-top: 10px; margin-left: 10px;" width="10%" height="10%"alt="이미지 손상"><p></p></a></div>
+
+          <% if (i==5) { %> <hr style = "border: none;background-color: transparent;"width="100%"> <% } %>
+
+          <%}%>
         
 
     </div>
 
- 
     </script>
     <hr width="100%">  <!--밑줄-->
 
