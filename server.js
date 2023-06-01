@@ -66,8 +66,6 @@ app.use('/api/user',require('./routes/userRouter'));
 
 
 
-
-
 //여기까지 사용하는거
 
 
