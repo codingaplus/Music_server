@@ -18,7 +18,7 @@ app.engine('html', require('ejs').renderFile);
 app.set("views", path.join(__dirname, "/pages")); //ejs파일 불러오는 경로를 ./pages/파일에서 그냥 '파일'이렇게 해도 되게끔 설정.
 
 
-const port=3000;
+const port=4000;
 app.listen(port, function(){
     console.log(`listen on ${port}`);
 });
@@ -164,16 +164,4 @@ app.use('/api/user',require('./routes/userRouter'));
 //     const q=req.query;
 //     console.log(q);
 // });
-
-
-// app.get('/user/:id',(req,res)=>{
-//     // const q = req.params; //:id가 params로 들어가는거임
-//     // console.log(q.id);
-//     // res.send({'sound':q.id});
-//     const q=req.query;
-//     console.log(q);
-// });
-
-
-
 
