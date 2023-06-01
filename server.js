@@ -39,7 +39,7 @@ app.get('/genre/:name',(req,res)=>{
 })
 
 app.use('/search',require('./routes/search_Router'));
-
+app.use('/api/search',require('./routes/search_Router'));
 
 //여기부터 게시판 부분
 app.use('/api/list',require('./routes/listRouter')); //게시판 메인
@@ -56,8 +56,6 @@ app.use('/api/list/read/:idx',require('./routes/list_detail_Router'));
 app.use('/api/movie',require('./routes/movieRouter'));
 
 app.use('/api/user',require('./routes/userRouter'));
-
-
 
 
 
