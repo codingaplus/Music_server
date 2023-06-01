@@ -79,42 +79,37 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid" style ="margin-left: 250px;">
-          <a class="navbar-brand " href="http://localhost:4000/"><strong><p style="font-size:150%">IRIS</p></strong></a>
-          <form action="search" method="get" class="search-form">
-            <input type="text" class="search-bar" name="query" placeholder="검색어를 입력하세요.">
-            <input type="submit" class="search-button" value="Search" >
-          </form>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-  
-          
-          <div class="collapse navbar-collapse" id="navbarSupportedContent" style ="margin-right: 250px;">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">국내음악 </a>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">해외음악 </a>
-              </li>
+      <div class="container-fluid" style ="margin-left: 250px;">
+        <a class="navbar-brand " href="#"><strong><p style="font-size:150%">IRIS</p></strong></a>
+        <form action="search" method="get" class="search-form">
+          <input type="text" class="search-bar" name="query" placeholder="검색어를 입력하세요.">
+          <input type="submit" class="search-button" value="Search" >
+        </form>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style ="margin-right: 250px;">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
             </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  장르
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">힙합</a></li>
-                  <li><a class="dropdown-item" href="#">발라드</a></li>
-                  <li><a class="dropdown-item" href="#">댄스</a></li>
-                </ul>
-            </ul>
-            
-          </div>
+            <li class="nav-item">
+              <a class="nav-link" href="#">국내음악 </a>
+            <li class="nav-item">
+                <a class="nav-link" href="#">해외음악 </a>
+            </li>
+          </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://port-0-music-server-vpkwa2blibirvs1.sel4.cloudtype.app/api/list">음악 요청 게시판 </a>
+            </li>
+          </ul>
+          
         </div>
-      </nav>  <!--내비바-->
+      </div>
+    </nav>  <!--내비바-->
+
 
 
     <hr width="100%">  <!--밑줄-->
