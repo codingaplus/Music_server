@@ -23,10 +23,11 @@ app.listen(port, function(){
     console.log(`listen on ${port}`);
 });
 
-app.get('/',(req,res)=>{
-    res.render('index');
-});
+// app.get('/',(req,res)=>{
+//     res.render('index');
+// });
 
+app.use('/',require('./routes/chart_Router'));
 app.use('/play',require('./routes/playRouter'));
 app.get('/type/:name',(req,res)=>{
     const {name}=req.params;
@@ -56,6 +57,10 @@ app.use('/api/list/read/:idx',require('./routes/list_detail_Router'));
 app.use('/api/movie',require('./routes/movieRouter'));
 
 app.use('/api/user',require('./routes/userRouter'));
+
+
+
+
 
 
 
@@ -160,6 +165,4 @@ app.use('/api/user',require('./routes/userRouter'));
 //     const q=req.query;
 //     console.log(q);
 // });
-
-
 
