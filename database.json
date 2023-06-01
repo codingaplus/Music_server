@@ -2,6 +2,6 @@
     "host":"svc.sel4.cloudtype.app",
     "user":"root",
     "password":"jwhm2034",
-    "port":"30743",
+    "port":"31103",
     "database":"movietest"
 }
