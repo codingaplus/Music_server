@@ -188,15 +188,7 @@
       audioElement.src = './audio/<%=data.title%>.mp3';
   
       // getUserMedia를 사용하여 로컬 오디오 스트림 가져오기
-      navigator.mediaDevices.getUserMedia({ audio: false })
-        .then(stream => {
-          localStream = stream;
-          // 로컬 오디오 스트림을 audio 요소에 연결
-          audioElement.srcObject = stream;
-        })
-        .catch(error => {
-          console.error('Error accessing microphone:', error);
-        });
+    
   
       // 피어 연결 생성 및 설정
       function createPeerConnection() {
