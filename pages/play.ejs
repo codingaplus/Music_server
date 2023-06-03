@@ -195,9 +195,7 @@
         peerConnection = new RTCPeerConnection();
   
         // 로컬 스트림을 피어 연결에 추가
-        localStream.getTracks().forEach(track => {
-          peerConnection.addTrack(track, localStream);
-        });
+       
   
         // 원격 스트림 수신 이벤트 처리
         peerConnection.ontrack = event => {
